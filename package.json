@@ -10,12 +10,12 @@
     "socket.io": "^2.4.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.7"
   },
   "scripts": {
     "watch": "nodemon --watch \"src/\" --exec \"node src/app.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    
   },
   "repository": {
     "type": "git",
