@@ -104,7 +104,7 @@ window.addEventListener('load', ()=>{
             socket.emit('chat', data);
 
 
-            //add local chat
+            //add localchat
             h.addChat(data, 'local');
         }
 

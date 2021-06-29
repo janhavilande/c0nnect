@@ -4469,13 +4469,13 @@ input[type="submit"].btn-block {
 }
 .badge-danger {
   color: #fff;
-  background-color: #dc3545;
+  background-color: #2d2d2d;
 }
 .badge-danger[href]:focus,
 .badge-danger[href]:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #bd2130;
+  background-color: #2d2d2d;
 }
 .badge-light {
   color: #212529;
