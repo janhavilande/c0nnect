@@ -1,2 +1,3 @@
 Connect, chat, collaborate today!
-at: https://connectoday.herokuapp.com/
+
+Live at: https://connectoday.herokuapp.com/
