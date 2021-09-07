@@ -192,7 +192,9 @@ a:hover,
 a,
 button {
   color: #fff;
+  cursor: pointer;
   outline: medium none;
+  border-radius: 40px;
 }
 button:focus,
 input:focus,
@@ -336,14 +338,13 @@ hr {
 .btn {
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
-  padding: 17px 25px !important;
+  padding: 11px 11px !important;
   color: #fff;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
   -moz-user-select: none;
-  letter-spacing: 1px;
   line-height: 0;
   margin-bottom: 0;
   cursor: pointer;
@@ -376,7 +377,6 @@ hr {
   border-radius: 0px;
 }
 .btn i {
-  padding-right: 11px;
 }
 .btn:hover {
   color: #fff !important;
@@ -2404,12 +2404,10 @@ hr {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-height {
-    min-height: 500px;
   }
 }
 @media (max-width: 575px) {
   .slider-height {
-    min-height: 600px;
   }
 }
 .slider-height2 {

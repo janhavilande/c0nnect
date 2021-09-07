@@ -5,7 +5,7 @@ window.addEventListener('load', ()=>{
     document.querySelector('#toggle-chat-pane').addEventListener('click', (e)=>{
         document.querySelector('#chat-pane').classList.toggle('chat-opened');
 
-        //remove the 'New' badge on chat icon (if any) once chat is opened.
+        //remove the 'Unread' badge on chat icon (if any) once chat is opened.
         setTimeout(()=>{
             if(document.querySelector('#chat-pane').classList.contains('chat-opened')){
                 helpers.toggleChatNotificationBadge();
@@ -14,8 +14,9 @@ window.addEventListener('load', ()=>{
     });
 
 
-    //When the video frame is clicked. This will enable picture-in-picture
-    document.getElementById('local').addEventListener('click', ()=>{
+
+    //Enables picture-in-picture, when video frame is clicked
+    document.getElementById('local').addEventListener('click', ()=>{  
         if (!document.pictureInPictureElement) {
             document.getElementById('local').requestPictureInPicture()
             .catch(error => {
@@ -23,7 +24,6 @@ window.addEventListener('load', ()=>{
                 console.error(error);
             });
         } 
-          
         else {
             document.exitPictureInPicture()
             .catch(error => {
@@ -52,8 +52,8 @@ window.addEventListener('load', ()=>{
             let roomLink = `${location.origin}?room=${roomName.trim().replace(' ', '_')}_${helpers.generateRandomString()}`;
 
             //show message with link to room
-            document.querySelector('#room-created').innerHTML = `Room successfully created. Click <a href='${roomLink}'>here</a> to enter room. 
-                Share the room link with your partners.`;
+            document.querySelector('#room-created').innerHTML = `A ChatRoom has been created. Click <a href='${roomLink}'>here</a> to enter room. 
+                Share the room link for others to join.`;
 
             //empty the values
             document.querySelector('#room-name').value = '';
@@ -87,4 +87,6 @@ window.addEventListener('load', ()=>{
             document.querySelector('#err-msg-username').innerHTML = "Please input your name";
         }
     });
+
+    
 })

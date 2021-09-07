@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 13px Helvetica, Arial;
+}
+
+#lobby {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #58acfa;
+  background-color: #58acfa;
+}
+#lobby h3 {
+  background: #58acfa;
+  text-align: center;
+  padding: 10px;
+}
+#lobby p {
+  background: #58acfa;
+  text-align: center;
+  padding: 10px;
+}
+#dragboxes p {
+  background: #66ccff;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: gray;
+}
+#lobby form input {
+  width: 100%;
+  padding: 5px;
+}
+#lobby ul {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-color: #58acfa;
+}
+#users {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#users li {
+  padding: 5px 10px;
+}
+#users li:nth-child(odd) {
+  background: #eee;
+}
+#users li:nth-child(even) {
+  background: #fff;
+}
+
+#room {
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#chat {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-style: solid none none solid;
+  border-width: 6px;
+  border-color: #58acfa;
+  overflow: scroll;
+}
+#chatform {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-style: solid none solid solid;
+  border-width: 6px;
+  border-color: #58acfa;
+}
+#room form {
+  background: #000;
+  padding: 3px;
+  width: 100%;
+  height: 100%;
+}
+#room form input {
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  height: 100%;
+}
+#room form button {
+  width: 9.6%;
+  background: #66ccff;
+  margin: 1px 0.2%;
+  border: none;
+  padding: 10px;
+  height: 100%;
+}
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#messages li {
+  padding: 5px 10px;
+}
+
+#lobby button {
+  background: #66ccff;
+  width: 40%;
+  margin-right: 30%;
+  margin: auto 30%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  padding: 10px;
+  height: 100%;
+}

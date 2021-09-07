@@ -48,14 +48,14 @@
 }
 
 .chat-row {
-  height: 100%;
+  height: 10%;
   overflow-x: scroll;
 }
 
 .remote-video {
   position: relative;
   object-fit: cover !important;
-  height: 300px;
+  width: 500px;
 }
 
 .main {
@@ -66,8 +66,8 @@
   bottom: 0;
   left: 0;
   position: fixed;
-  height: 100px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   z-index: 1000;
 }
 
@@ -102,7 +102,7 @@
     width: 100vw;
     z-index: 99999;
     transition: 0.3s;
-    top: 47px;
+    top: 86px;
   }
 
   .chat-col.chat-opened {
@@ -123,8 +123,8 @@
   }
 
   .local-video {
-    height: 80px;
-    width: 100px;
+    height: 100px;
+    width: 200px;
   }
 
   #chat-messages {
@@ -207,4 +207,3 @@ input:focus {
     font-size: 20px;
   }
 }
-

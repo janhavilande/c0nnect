@@ -2,57 +2,35 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <title>MS Teams Clone</title>
+    <title>Connectoday</title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
-
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/animated-headline.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel='stylesheet' href='assets/css/app.css' type="text/css"-->
-
     <script src='/socket.io/socket.io.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="module" src='assets/js/autolink.js'></script>
     <script type="module" src='assets/js/rtc.js'></script>
+    <script type="module" src='assets/js/attach.js'></script>
     <script type="module" src='assets/js/events.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.3.0/adapter.min.js"
-        integrity="sha256-2qQheewaqnZlXJ3RJRghVUwD/3fD9HNqxh4C+zvgmF4=" crossorigin="anonymous"></script>
+    <script type="module" src='assets/js/auth.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/7.3.0/adapter.min.js" integrity="sha256-2qQheewaqnZlXJ3RJRghVUwD/3fD9HNqxh4C+zvgmF4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 
 <body>
-    <!--  Preloader Start --
-    <div-- id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div-->
-    <!-- Single Slider -->
     <div class="single-slider d-flex align-items-center slider-height ">
         <div class="container">
             <div class="row align-items-center">
@@ -60,141 +38,97 @@
                     <div class="hero__caption">
                         <div class="container-fluid" id="room-create" hidden>
                             <div class="row mt-2">
-                                <h1 data-animation="fadeInLeft" data-delay=".6s">MS Teams Clone</h1>
-                                <p style="color:#9F78FF; font-size:25px">Create a Room </p>
+                                <h1 data-animation="fadeInLeft" data-delay=".6s" >ConnecToday</h1>
+                                    <p style="color:#9F78FF; font-size:25px">Create a Room to start a meet!</p>
                                 <div class="col-12 text-center">
                                     <span class="form-text small text-danger" id='err-msg'></span>
                                 </div>
-
-
-
                                 <label for="room-name">Room Name</label>
-                                <input type="text" id='room-name' class="form-control rounded-0"
+                                <input type="text" id='room-name' class="form-control"
                                     placeholder="Enter your Room Name">
-
                                 <label for="your-name">Your Name</label>
-                                <input type="text" id='your-name' class="form-control rounded-0"
+                                <input type="text" id='your-name' class="form-control"
                                     placeholder="Enter your Name">
-
-
-                                <button id='create-room' class="btn btn-block rounded-0 btn-info">Create Room</button>
-
-
-                                <div id='room-created'></div>
-
+                                <button id='create-room' class="btn btn-block btn-info" style="padding: 17px 25px !important;" >Create Room</button>
+                                <div   style="padding: 17px 25px !important;" id='room-created'></div>
+                                <div class="slider-btns">
+                                <div>
+                                    <img class="hero__img d-none d-lg-block f-right" style="margin-left: 730px;height: 130%;"  src="assets/img/hero/hero_right.png">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero__img d-none d-lg-block f-right">
-                        <img src="assets/img/hero/hero_right.png"
-                            style="position: relative; right:-50px; vertical-align: middle; margin-right: -100px; border-style: none;"
-                            alt="" data-animation="fadeInRight" data-delay="1s">
-                    </div>
-                </div>
+            </div>
+        </div>
+    </div>
                 <!-- Slider Shape -->
                 <div class="slider-shape d-none d-lg-block">
                     <img class="slider-shape1" src="assets/img/hero/top-left-shape.png" alt="">
                 </div>
             </div>
-
+                <!--navbar-->
             <nav class="navbar fixed-top bg-info d-print-none">
-                <div class="text-white">MS Teams Clone</div>
+                <div class="text-white" a href="/" style="cursor: pointer;" >ConnecToday <i class="fa fa-users" aria-hidden="true"></i> </div>
 
                 <div class="pull-right room-comm" hidden>
-                    <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-video'>
+                    <button class="btn btn-sm btn-no-effect" id='toggle-video' title = "Hide Video">
                         <i class="fa fa-video text-white"></i>
                     </button>
 
-                    <button class="btn btn-sm rounded-0 btn-no-effect" id='toggle-mute'>
+                    <button class="btn btn-sm btn-no-effect" id='toggle-mute' title = "Mute">
 
-                        <i class="fa fa-volume-up text-white"></i>
+                        <i class="fa fa-microphone text-white"></i>
                     </button>
 
-                    <button class="btn btn-sm text-white pull-right d-md-none btn-no-effect" id='toggle-chat-pane'>
+                    <button class="btn btn-sm btn-no-effect" id='share-screen' title="Share screen">
+                        <i class="fa fa-desktop text-white"></i>
+                    </button>
+                    
+                    <button class="btn btn-sm text-white pull-right btn-no-effect" id='toggle-chat-pane' title = "Text Chat">
                         <i class="fa fa-comment"></i> <span class="badge badge-danger very-small font-weight-lighter"
-                            id='new-chat-notification' hidden>New</span>
-                    </button>
-
-                    <button class="btn btn-sm rounded-0 btn-no-effect text-white">
-                        <a href="/" class="text-white text-decoration-none">Leave Room</a>
-                    </button>
+                            id='new-chat-notification' hidden>Unread</span>
+                    </button>                 
+                <button class="btn btn-sm rounded-0 btn-no-effect text-white">
+                    <a href="/" class="text-white text-decoration-none"><i class="fa fa-home text-white" title="Leave Room"></i></a>
+                </button>
                 </div>
             </nav>
-
-            <div class="container-fluid" id='room-create' hidden>
-                <div class="row">
-                    <div class="col-12 h2 mt-5 text-center">Create your Room</div>
-                </div>
-
-                <div class="row mt-2">
-                    <div class="col-12 text-center">
-                        <span class="form-text small text-danger" id='err-msg'></span>
-                    </div>
-
-                    <div class="col-12 col-md-4 offset-md-4 mb-3">
-                        <label for="room-name">Room Name</label>
-                        <input type="text" id='room-name' class="form-control rounded-0" placeholder="Room Name">
-                    </div>
-
-                    <div class="col-12 col-md-4 offset-md-4 mb-3">
-                        <label for="your-name">Your Name</label>
-                        <input type="text" id='your-name' class="form-control rounded-0" placeholder="Your Name">
-                    </div>
-
-                    <div class="col-12 col-md-4 offset-md-4 mb-3">
-                        <button id='create-room' class="btn btn-block rounded-0 btn-info">Create Room</button>
-                    </div>
-
-                    <div class="col-12 col-md-4 offset-md-4 mb-3" id='room-created'></div>
-                </div>
-            </div>
-
-
-
             <div class="container-fluid" id='username-set' hidden>
                 <div class="row">
                     <div class="col-12 h4 mt-5 text-center">Your Name</div>
                 </div>
-
                 <div class="row mt-2">
                     <div class="col-12 text-center">
                         <span class="form-text small text-danger" id='err-msg-username'></span>
                     </div>
-
                     <div class="col-12 col-md-4 offset-md-4 mb-3">
                         <label for="username">Your Name</label>
                         <input type="text" id='username' class="form-control rounded-0" placeholder="Your Name">
                     </div>
-
                     <div class="col-12 col-md-4 offset-md-4 mb-3">
-                        <button id='enter-room' class="btn btn-block rounded-0 btn-info">Enter Room</button>
+                        <button id='enter-room' class="btn btn-block rounded-0 btn-info" style="padding: 20px 25px !important;" >Enter Room</button>
                     </div>
                 </div>
             </div>
-
-
-
+            
+            <!-- room -->
+            <link rel="stylesheet" href="assets/css/app.css" />
             <div class="container-fluid room-comm" hidden>
                 <div class="row">
-                    <video class="local-video" id='local' volume='0' autoplay muted></video>
+                    <video class="local-video mirror-mode" id='local' volume='0' title = "Your video" autoplay muted></video>
                 </div>
-
                 <div class="row">
-                    <div class="col-md-9 mt-3 mb-3 main">
-                        <div class="row" id='videos'></div>
-                    </div>
-
+                <div class="col-md-12 main" id='main-section'>
+                    <div class="row mt-2 mb-2" id='videos'>
+                </div>
                     <div class="col-md-3 chat-col d-print-none mb-2 bg-info" id='chat-pane'>
                         <div class="row">
-                            <div class="col-12 text-center h2 mb-3">CHAT</div>
+                            <div class="col-12 text-center h2 mb-3">CHAT BOX <i class="fa fa-comment"></i></div>
                         </div>
-
-                        <div id='chat-messages'></div>
-
+                        <div id='chat-messages' style="border-radius: 10px;background-image: url('assets/img/bg-image.jpg');"></div>
                         <div class="row">
-                            <textarea id='chat-input' class="form-control rounded-0 chat-box border-info" rows='3'
+                            <textarea id="chat-input" class="form-control rounded-0 chat-box border-info" rows='3'
                                 placeholder="Type here..."></textarea>
                         </div>
                     </div>
